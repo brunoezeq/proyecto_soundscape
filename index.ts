@@ -10,7 +10,7 @@ const port: string | number = process.env.PORT || 8000;
 
 app.get("/", (req: Request, res: Response) => {
     //In principle a Hello World
-    res.send("Hola Bruno estoy ejecuntando un servidor local");
+    res.send("Hola Bruno estoy ejecuntando un servidor local. KIERO LEXEEEEEEEE");
 });
 
 app.listen(port, () => {
