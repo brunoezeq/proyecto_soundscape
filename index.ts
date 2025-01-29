@@ -8,14 +8,8 @@ dotenv.config();
 
 const port = process.env.PORT || 8000;
 
-<<<<<<< HEAD
-app.get("/", (req: Request, res: Response) => {
-    //In principle a Hello World
-    res.send("Hola Bruno estoy ejecuntando un servidor local. KIERO LEXEEEEE");
-=======
 server.listen(port, () => {
     LogSuccess(`Server started in http://localhost:${port}/api`);
->>>>>>> 9430f505962ae26ce5c0e87388adb2231d8c3a7e
 });
 
 server.on('error', (error) => {
