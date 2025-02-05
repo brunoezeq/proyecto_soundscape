@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,15 +12,25 @@ const NavbarMenu = ()=> {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Inicio</Nav.Link>
-                        <Nav.Link href="#link">Productos</Nav.Link>
-                        <Nav.Link href="#link">Perfil</Nav.Link>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/catalogo">Productos</Link>
+                        <Link to="/perfil">Perfil</Link>
                         <NavDropdown title="Más" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Quienes Somos</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Comercialización</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Consultas</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.4">Términos de Uso</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/4.5">Contacto</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.1">
+                                <Link to="/quienes-somos" >Quienes Somos</Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                <Link to="/quienes-somos" >Comercialización</Link>
+                                </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+                                <Link to="/consultas">Consultas</Link>
+                                </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">
+                                <Link to="/terminos-de-uso=">Términos de Uso</Link>
+                                </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/4.5">
+                                <Link to="/info=">Contacto</Link>
+                                </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
