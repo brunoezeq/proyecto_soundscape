@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi"; // Ícono de menú hamburguesa
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -37,8 +38,8 @@ const SideBar = () => {
 
             {/* Enlaces debajo */}
             <div className="text-center mt-auto">
-                <Button variant="link" className="text-white d-block">🛒 Carrito</Button>
-                <Button variant="link" className="text-white d-block">👤 Perfil</Button>
+                <Link to="/carrito" className="text-white d-block">🛒 Carrito</Link>
+                <Link to="/perfil" className="text-white d-block">👤 Perfil</Link>
             </div>
 
             {/* Menú desplegable que cubre la pantalla */}
@@ -50,35 +51,35 @@ const SideBar = () => {
                     <div className="d-flex flex-column align-items-center justify-content-center align-items-center">
                         <Row>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Inicio</Button>
+                                <Link to="/" className="text-white fs-4" onClick={toggleMenu}>Inicio</Link>
                             </Col>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Productos</Button>
+                                <Link to="/catalogo" className="text-white fs-4" onClick={toggleMenu}>Productos</Link>
                             </Col>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Contacto</Button>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Button variant="link" className="text-white fs-4">Comercialización</Button>
-                            </Col>
-                            <Col>
-                                <Button variant="link" className="text-white fs-4">Términos de Uso</Button>
-                            </Col>
-                            <Col>
-                                <Button variant="link" className="text-white fs-4">Consultas</Button>
+                                <Link to="/info" className="text-white fs-4" onClick={toggleMenu}>Contacto</Link>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Quiénes Somos</Button>
+                                <Link to="/comercializacion" className="text-white fs-4" onClick={toggleMenu}>Comercialización</Link>
                             </Col>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Más vendidos</Button>
+                                <Link to="/terminos-de-uso" className="text-white fs-4" onClick={toggleMenu}>Términos de Uso</Link>
                             </Col>
                             <Col>
-                                <Button variant="link" className="text-white fs-4">Novedades</Button>
+                                <Link to="/consultas" className="text-white fs-4" onClick={toggleMenu}>Consultas</Link>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Link to="/quienes-somos" className="text-white fs-4" onClick={toggleMenu}>Quiénes Somos</Link>
+                            </Col>
+                            <Col>
+                                <Link to="/catalogo" className="text-white fs-4" onClick={toggleMenu}>Más vendidos</Link>
+                            </Col>
+                            <Col>
+                                <Link to="/catalogo" className="text-white fs-4" onClick={toggleMenu}>Novedades</Link>
                             </Col>
                         </Row>
                     </div>
