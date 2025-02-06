@@ -1,3 +1,6 @@
+/**
+ * Isaac
+ */
 const Info = () => {
     return <h2>Bienvenido a Info</h2>;
 };
